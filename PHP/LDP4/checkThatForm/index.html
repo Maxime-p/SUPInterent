@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>LDP 4</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <form action="checkThatForm.php" method="post">
+        <label for="prenom">Prénom : </label><input type="text" name="prenom" id="prenom"><br><br>
+        <label for="nom">Nom : </label><input type="text" name="nom" id="nom"><br><br>
+        <label for="email">E-Mail : </label><input type="email" name="email" id="email"><br><br>
+        <label for="age">Age : </label><input type="number" name="age" id="age"><br><br>
+        <label for="bachelor">Bachelor : </label><input type="text" name="bachelor" id="bachelor"><br><br>
+        <label for="psw">Mot de passe : </label><input type="password" name="psw" id="psw"><br><br>
+        <label for="psw2">Retaper le mot de passe : </label><input type="password" name="psw2" id="psw2"><br><br>
+
+        <label style="display: block;">Sexe :</label>
+        <input type="radio" name="gender" value="Femme"> Femme<br>
+        <input type="radio" name="gender" value="Homme"> Homme<br><br>
+
+        <label style="display: block;">Quel est votre tome du voyageur galactique préféré ?</label>
+        <input type="checkbox" name="tome[]" value="Le Guide du voyageur galactique"> Le Guide du voyageur galactique<br>
+        <input type="checkbox" name="tome[]" value="Le Dernier restaurant avant la fin du monde"> Le Dernier restaurant avant la fin du monde<br>
+        <input type="checkbox" name="tome[]" value="La Vie, L'Univers et le Reste"> La Vie, L'Univers et le Reste<br>
+        <input type="checkbox" name="tome[]" value="Salut, et encore merci poisson"> Salut, et encore merci poisson<br>
+        <input type="checkbox" name="tome[]" value="Globalement inoffensive"> Globalement inoffensive<br><br>
+
+        <label style="display: block;">Un petit commentaire</label>
+        <textarea id="ta" name="ta" readonly="readonly">&lt;b&gt;si ce texte s'affiche en gras, u lost the game&lt;/b&gt;</textarea><br><br>
+        <input type="submit">
+    </form>
+</body>
+</html>

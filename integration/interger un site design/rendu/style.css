@@ -1,0 +1,197 @@
+@font-face {
+    font-family: "Handsnow";
+	src: url('Handsnow.ttf');
+}
+
+body{
+    font-family: sans-serif;
+    font-size: 20px;
+    background-color: #23232b;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0px;
+    counter-reset: nb;
+}
+
+i{
+    font-size: 20px;
+}
+
+/* HEADER */
+
+header{
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    padding: 25px 50px;
+    border: 2px solid #34343c;
+    border-width: 2px 0px;
+}
+
+h1 {
+    font-family: "Handsnow";
+    font-size: 54px;
+    margin: 0px;
+}
+
+nav > ul > li{
+    font-size: 25px;
+    display: inline-block;
+    padding: 12px 50px;
+    cursor: pointer;
+}
+
+nav > ul > li:hover{
+    background-color: #1e1e23;
+}
+
+/* DROPDOWN */
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    text-decoration: none;
+    width: 216px;
+    margin: 0px;
+    padding: 0px;
+    z-index: 5;
+}
+
+.dropdown-content li {
+    display: block;
+    width: 165px;
+    padding: 15px 25px;
+}
+
+#dc1{
+    top: 100px;
+    right: 275px;
+    background-color: #1e1e23;
+}
+
+.action1:hover #dc1{
+    display: block;
+}
+
+#dc1 li:hover{
+    background-color: #17171b;
+}
+
+#dc2{
+    top: 59px;
+    left: -215px;
+    background-color: #17171b;
+}
+
+#dc2 li:hover{
+    background-color: #101013;
+}
+
+.action2:hover #dc2{
+    display: block;
+}
+
+/* CONTENU */
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+.container:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.container div{
+    position: relative;
+    height: 700px;
+}
+
+#left{
+    width: 750px;
+}
+
+img{
+    position: absolute;
+    border: 3px solid #d5a481;
+}
+
+#img1{
+    width: 500px;
+    top: 100px;
+}
+
+#img2{
+    width: 350px;
+    top: 200px;
+    left: 360px;
+}
+
+#rigth{
+    width: 600px;
+}
+
+#rigth > div{
+    position: absolute;
+    top: 150px;
+    left: 0px;
+    width: 500px;
+    height: 400px;
+    padding: 30px 20px;
+    background-color: white;
+}
+
+#rigth > div p {
+    color: #333333;
+}
+
+h2{
+    position: absolute;
+    left: 90px;
+    font-size: 26px;
+    font-weight: 100;
+}
+
+p{
+    position: absolute;
+    top: 70px;
+}
+
+h2::before{
+    display: inline-block;
+    position: absolute;
+    right: 170px;
+    overflow-x: hidden;
+    counter-increment: nb;
+    content: '0'counter(nb);
+    width: 28px;
+    color: #d5a481;
+    direction: rtl;
+}
+
+h2::after{
+    content: ' ';
+    display: block;
+    position: absolute;
+    width: 18px;
+    height: 2px;
+    top: 15px;
+    left: -28px;
+    background-color: #d5a481;
+}
+
+button{
+    position: absolute;
+    right: 80px;
+    bottom: 60px;
+    font-size: 16px;
+    border: 0px;
+    padding: 15px 30px;
+    color: white;
+    background-color: #d5a481;
+}
+
+h2, button{
+    text-transform: uppercase;
+}

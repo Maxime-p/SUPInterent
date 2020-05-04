@@ -1,0 +1,120 @@
+body{
+    font-family: sans-serif;
+    margin: 0;
+}
+
+h1{
+    text-align: center;
+    margin-top: 30vh;
+    transition-duration: 0.5s;
+}
+
+h2{
+    margin: 0 0 10px;
+}
+
+h3{
+    margin: 0;
+}
+
+.infodiv{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 270px;
+    height: 120px;
+    background-color: rgb(230,230,230);
+    border: 3px solid lightgray;
+    border-left: none;
+    border-top: none;
+    padding: 10px;
+}
+
+.infodiv div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.infodiv div button{
+    font-size: 18px;
+}
+
+.circlecenter{
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    border: 2px dashed lime;
+    border-radius: 50%;
+    animation: rotate 5s infinite linear;
+    animation-play-state: paused;
+}
+
+.circlecenter::before{
+    content: 'Start !';
+    color: green;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.circlecenter.go::before{
+    content: 'Go!';
+}
+
+.circlecenter.hidden::before{
+    content: '';
+}
+
+.waiting{
+    position: relative;
+    width: 60px;
+    height: 20px;
+    margin: 20px auto;
+    background-color: lightgray;
+    border: 2px solid grey;
+    transition-duration: 0.5s;
+}
+
+.waiting div{
+    width: 20px;
+    height: 20px;
+    background-color: grey;
+    animation: loader 0.5s infinite alternate linear;
+}
+
+.hide{
+    position: absolute;
+    width: 155px;
+    height: 155px;
+    left: 50%;
+    transform: translate(-50%);
+    transition-duration: 1s;
+    background-color: white;
+    z-index: 100;
+    opacity: 1;
+}
+
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loader {
+    from{
+        transform: translateX(0px);
+    }
+
+    to{
+        transform: translateX(40px);
+    }
+}

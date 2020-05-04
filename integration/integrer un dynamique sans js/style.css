@@ -1,0 +1,152 @@
+body{
+	font-family: sans-serif;
+	min-height: 100vh;
+	color: white;
+	background-color: #eef0f0;
+	margin: 0px;
+}
+
+header, footer{
+	display: flex;
+	background-color: #1a2942;
+}
+
+header{
+	justify-content: space-between;
+	padding: 20px;
+	-webkit-box-shadow: 0px 5px 9px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 5px 9px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 5px 9px 0px rgba(0,0,0,0.75);;
+}
+
+h1 > span{
+	color: #69c9db;
+}
+
+header > ul{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	list-style: none;
+}
+
+header > ul > li{
+	margin: 0px;
+	padding: 10px 18px;
+	border-radius: 5px;
+}
+
+header > ul > li:last-child{
+	background-color: #e15c7d;
+}
+
+input{
+	display: none;
+}
+
+.datatable{
+	max-width: 1600px;
+	margin: 50px auto;
+	padding: 20px;
+	color: #333a45;
+	background-color: white;
+	border-radius: 5px;
+}
+
+.datatable > h2{
+	text-transform: uppercase;
+	margin: 0px 0px 10px 0px;
+}
+
+.row{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.head{
+	display: flex;
+	height: 42px;
+	border: 2px solid #686f7a;
+}
+
+.head > div, .content > div > div{
+	flex: 1;
+	text-align: center;
+}
+
+.head > div{
+	font-weight: bold;
+}
+
+label{
+	display: block;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	user-select: none;
+}
+
+#reverse:checked ~ .datatable .reverse {
+	color: white;
+	background-color: #8E8AC1;
+}
+
+#reverse:checked ~ .datatable .content{
+	flex-direction: column-reverse;
+}
+
+#type:checked ~ .datatable .type {
+	color: white;
+	background-color: #8E8AC1;
+}
+
+#type:checked ~ .datatable .content > .spy{
+	order: 1;
+}
+
+#type:checked ~ .datatable .content > .soldier{
+	order: 2;
+}
+
+.content{
+	display: flex;
+	flex-direction: column;
+}
+
+.content > div{
+	border-bottom: 1px solid #e8e9ec;
+	align-items: center;
+}
+
+p{
+	color: white;
+	border-radius: 5px;
+}
+
+.science > div:last-child > p{
+	display: inline-block;
+	padding: 5px 8px;
+	background-color: #e8c768;
+}
+
+.spy > div:last-child > p{
+	display: inline-block;
+	padding: 5px 8px;
+	background-color: #58afdc;
+}
+
+.soldier > div:last-child > p{
+	display: inline-block;
+	padding: 5px 8px;
+	background-color: #e15c7d;
+}
+
+footer{
+	position: absolute;
+	bottom: 0px;
+	padding: 10px;
+}
+
+footer > div{
+	flex: 1;
+}
